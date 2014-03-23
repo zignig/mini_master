@@ -1,0 +1,5 @@
+base:
+  '*':
+    - all
+  'master':
+    - master
