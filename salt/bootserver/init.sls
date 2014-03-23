@@ -1,9 +1,5 @@
 # install the boot server application
 
-apache2:
-  pkg:
-    - installed 
-
 restart_apache:
   module.wait:
     - name: cmd.run
