@@ -6,8 +6,8 @@ apache2:
 
 restart_apache:
   module.wait:
-      - name: cmd.run
-          - cmd: service apache2 restart
+    - name: cmd.run
+    - cmd: service apache2 restart
 
 
 http://bl3dr.com/git/bootserver.git:
