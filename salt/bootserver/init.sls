@@ -7,7 +7,8 @@ restart_apache:
 
 
 http://bl3dr.com/git/bootserver.git:
-  - rev: HEAD
-  - target: /opt/bootserver
-  - watch_in:
-    - module: restart_apache
+  git.latest:
+    - rev: HEAD
+    - target: /opt/bootserver
+    - watch_in:
+      - module: restart_apache
