@@ -13,6 +13,14 @@ flask-login:
   pip:
     - installed 
 
+flask-wtf:
+  pip:
+    - installed 
+
+flask-sqlalchemy:
+  pip:
+    - installed 
+
 http://bl3dr.com/git/bootserver.git:
   git.latest:
     - rev: HEAD
