@@ -5,6 +5,13 @@ restart_apache:
     - name: cmd.run
     - cmd: service apache2 restart
 
+flask:
+  pip:
+    - installed 
+
+flask-login:
+  pip:
+    - installed 
 
 http://bl3dr.com/git/bootserver.git:
   git.latest:
