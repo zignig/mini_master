@@ -11,12 +11,3 @@
     - minute: random
     - hour: 0,6,12,18
 
-# install the bootserver
-apache2:
-  pkg:
-    - installed 
-
-apt-cacher-ng:
-  pkg:
-    - installed
-
