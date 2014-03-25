@@ -11,3 +11,6 @@ python-pip:
   pkg:
     - installed
 
+tree:
+  pkg:
+    - installed 
