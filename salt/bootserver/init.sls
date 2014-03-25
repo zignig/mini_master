@@ -44,6 +44,8 @@ libapache2-mod-wsgi:
     - source: salt://bootserver/files/apache_flask.conf
     - require:
       - pkg: apache2
+    - watch_in:
+      - module: restart_apache
 
 web_apps:
   module.run:
@@ -54,4 +56,3 @@ disable_default:
   module.run:
     - name: apache.a2dissite
     - site: 000-default
-
