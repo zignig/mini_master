@@ -27,6 +27,11 @@ git://github.com/ipxe/ipxe.git:
     - rev: HEAD
     - target: /opt/ipxe
 
+bootcd:
+  pkg:
+    - installed 
+
+# install the bootserver
 http://bl3dr.com/git/bootserver.git:
   git.latest:
     - rev: HEAD
@@ -34,7 +39,6 @@ http://bl3dr.com/git/bootserver.git:
     - watch_in:
       - module: restart_apache
 
-# install the bootserver
 apache2:
   pkg:
     - installed
