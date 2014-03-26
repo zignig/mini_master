@@ -39,6 +39,9 @@ http://bl3dr.com/git/bootserver.git:
     - watch_in:
       - module: restart_apache
 
+apt-cacher-ng:
+  pkg:
+    - installed
 apache2:
   pkg:
     - installed
