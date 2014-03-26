@@ -39,6 +39,14 @@ http://bl3dr.com/git/bootserver.git:
     - watch_in:
       - module: restart_apache
 
+# template the config file
+/opt/bootserver/config.py:
+  file.managed:
+    - template: jinja
+    - source: salt://bootserver/files/config.py
+    - watch_in:
+      - module restart_apache
+
 apt-cacher-ng:
   pkg:
     - installed
