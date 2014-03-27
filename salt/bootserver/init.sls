@@ -31,6 +31,19 @@ bootcd:
   pkg:
     - installed 
 
+# generate the template file for ipxe include
+/opt/ipxe/src/server.ipxe:
+  file.managed:
+    - template: jinja
+    - source: salt://bootserver/files/server.ipxe
+    - watch_in:
+      - module: build_ipxe
+
+build_ipxe:
+  module.wait:
+    - name: cmd.run
+    - cmd: 'cd /opt/ipxe/src ; make bin/ipxe.iso EMBED=server.ipxe ; cp /opt/ipxe/src/bin/ipxe.iso /root/boot.iso'
+      
 # install the bootserver
 http://bl3dr.com/git/bootserver.git:
   git.latest:
