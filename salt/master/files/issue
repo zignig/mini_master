@@ -1,1 +1,1 @@
-{{ grains['nodename'] }} - http://{{ salt['netowrk.ip_addrs']()[0] }}/
+{{ grains['nodename'] }} - http://{{ salt['network.ip_addrs']()[0] }}/
