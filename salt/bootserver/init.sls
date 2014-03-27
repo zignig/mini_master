@@ -42,7 +42,9 @@ bootcd:
 build_ipxe:
   module.wait:
     - name: cmd.run
-    - cmd: 'cd /opt/ipxe/src ; make bin/ipxe.iso EMBED=server.ipxe ; cp /opt/ipxe/src/bin/ipxe.iso /root/boot.iso'
+    - cmd: 'cd /opt/ipxe/src ; make bin/ipxe.iso EMBED=server.ipxe ; cp /opt/ipxe/src/bin/ipxe.iso /opt/bootserver/static/images/boot.iso'
+    - require:
+      - http://bl3dr.com/git/bootsever.git
       
 # install the bootserver
 http://bl3dr.com/git/bootserver.git:
