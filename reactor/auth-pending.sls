@@ -4,18 +4,15 @@
 
 import yaml 
 import sys
+import redis 
 
-# add the bootserver path
-sys.path.append('/opt/bootserver')
-
-from model import *
+r = redis.Redis()
 
 def run():
     answer = {}
     print data,tag
     if data['act'] == 'pend':
-        answer['take_key'] = {'wheel.key.accept' :  [{'match': data['id']}]}
-	print answer
-#        s = Session.query.all()
-#        print s
+	if r.sismember('machines',data['id']):
+		answer['take_key'] = {'wheel.key.accept' :  [{'match': data['id']}]}
+		r.srem('machines',data['id'])
     return answer 
