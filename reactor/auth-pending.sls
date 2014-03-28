@@ -14,7 +14,8 @@ def run():
     answer = {}
     print data,tag
     if data['act'] == 'pend':
-        answer = {'wheel.key.accept' :  [{'match': data['id']}]}
-        s = Session.query.all()
-        print s
-    return {}
+        answer['take_key'] = {'wheel.key.accept' :  [{'match': data['id']}]}
+	print answer
+#        s = Session.query.all()
+#        print s
+    return answer 
