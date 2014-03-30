@@ -68,10 +68,6 @@ https://github.com/zignig/exarch.git:
     - watch_in:
       - module restart_apache
 
-redis-server:
-  pkg:
-    - installed
-
 apt-cacher-ng:
   pkg:
     - installed
