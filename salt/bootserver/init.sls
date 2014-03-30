@@ -25,10 +25,6 @@ flask-sqlalchemy:
   pip:
     - installed 
 
-redis:
-  pip:
-    - installed
-
 # get ipxe source 
 git://github.com/ipxe/ipxe.git:
   git.latest:
