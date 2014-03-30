@@ -67,6 +67,10 @@ apache2:
   pkg:
     - installed
 
+redis-server:
+  pkg:
+    - installed
+
 libapache2-mod-wsgi:
   pkg:
     - installed
