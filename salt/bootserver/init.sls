@@ -25,6 +25,10 @@ flask-sqlalchemy:
   pip:
     - installed 
 
+redis:
+  pip:
+    - installed
+
 # get ipxe source 
 git://github.com/ipxe/ipxe.git:
   git.latest:
@@ -64,9 +68,14 @@ https://github.com/zignig/exarch.git:
     - watch_in:
       - module restart_apache
 
+redis-server:
+  pkg:
+    - installed
+
 apt-cacher-ng:
   pkg:
     - installed
+
 apache2:
   pkg:
     - installed
