@@ -13,6 +13,10 @@ flask-login:
   pip:
     - installed 
 
+redis:
+  pip:
+    - installed 
+
 flask-wtf:
   pip:
     - installed 
