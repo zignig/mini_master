@@ -45,7 +45,7 @@ build_ipxe:
     - cmd: 'cd /opt/ipxe/src ; make bin/ipxe.iso EMBED=server.ipxe ; cp /opt/ipxe/src/bin/ipxe.iso /opt/bootserver/static/images/boot.iso'
       
 # install the bootserver
-http://bl3dr.com/git/bootserver.git:
+https://github.com/zignig/exarch.git:
   git.latest:
     - rev: HEAD
     - target: /opt/bootserver
